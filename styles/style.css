@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+    --blue : #26408B;
+    --light-blue : #A6CFD5;
+    --black : #000000;
+    --white : #FFFFFF;
+    --green : #496F5D;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto Slab', serif;
+    background-color: var(--light-blue);
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-form {
+    background-color: var(--blue);
+    color: var(--white);
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1.1em;
+}
+
+.main-form input {
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+}
+
+.logo-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-logo {
+    width: 150px;
+    height: auto;
+}
+
+.login-btn {
+    background-color: var(--light-blue);
+    color: var(--black);
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    padding: 7px;
+    width: 50%;
+    transition: 0.4s;
+}
+
+.login-btn:hover {
+    background-color: var(--white);
+    transition: 0.4s;
+    cursor: pointer;
+}
