@@ -12,20 +12,19 @@
 
 <body>
     <div class="form">
-        <div class="logo-title">
-            <img src="/assets/img/kepri-logo.svg" class="form-logo" alt="">
-            <h3>SISTEM LAYANAN <br /> PENCAIRAN DANA</h3>
-        </div>
-        <form action="login.php" method="post" class="main-form">
-            <label class="text-center bg-success p-2 rounded-2">Pengajuan</label>
+        <form action=".php" method="post" class="main-form">
+            <label class="text-center bg-success p-2 rounded-2">Ubah data akun</label>
+            <label class="label-login" for="name">Nama lengkap</label>
+            <input type="text" name="username" id="name" placeholder="Nama lengkap" required>
+            <label class="label-login" for="email">Alamat email</label>
+            <input type="email" name="username" id="username" placeholder="Alamat email" required>
             <label class="label-login" for="username">ID Pengguna (Username)</label>
             <input type="text" name="username" id="username" placeholder="ID Pengguna" required>
             <label class="label-login" for="password">Kata Sandi (Password)</label>
             <input type="password" name="password" id="password" placeholder="Kata Sandi" required>
             <div class="btn-container">
-                <button class="login-btn" type="submit" value="login">Login</button>
+                <button class="login-btn" type="submit" value="save">Simpan</button>
             </div>
-            <label>Belum punya akun ? Daftar <a class="text-decoration-none text-warning" href="register.html">disini</a></label>
         </form>
     </div>
 </body>
