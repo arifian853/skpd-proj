@@ -26,20 +26,22 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            $verify_query = mysqli_query($con, "SELECT Email FROM users WHERE Email='$email'");
+            $verify_query = mysqli_query($con, "SELECT Email FROM users_pengaju WHERE Email='$email'");
 
             if(mysqli_num_rows($verify_query) !=0) {
-                echo "<div class='alert alert-danger'> 
-                        <p class='text-white text-center'> Email ini sudah dipakai, silakan gunakan alamat email lain </p>
+                echo " <br />
+                <div class='alert alert-danger'> 
+                        <p class='text-center'> Email ini sudah dipakai, silakan gunakan alamat email lain </p>
                       </div>
                       <br />";
                 echo "<a href='javascript:self.history.back()'> <button class='btn btn-primary'> Kembali </button> </a>";
             }
             else {
-                mysqli_query($con, "INSERT INTO users(Username,Email,Password) VALUES('$username', '$email', '$password',)") or die("Sepertinya ada kesalahan");
+                mysqli_query($con, "INSERT INTO users_pengaju(Username,Email,Password) VALUES('$username', '$email', '$password')") or die("Sepertinya ada kesalahan");
     
-                echo "<div class='alert alert-success'> 
-                        <p class='text-white text-center'> Pendaftaran berhasil, silakan login. </p>
+                echo " <br />
+                <div class='alert alert-success'> 
+                        <p class='text-center'> Pendaftaran berhasil, silakan login. </p>
                       </div>
                       <br />";
                 echo "<a href='index.php'> <button class='btn btn-primary'> Masuk (login) sekarang </button> </a>";
@@ -59,7 +61,7 @@
             <label class="label-login" for="password">Kata Sandi (Password)</label>
             <input type="password" name="password" id="password" placeholder="Kata Sandi" required>
             <div class="btn-container">
-                <button class="login-btn" type="submit" value="login">Daftar</button>
+                <button type="submit" name="submit" class="login-btn" value="Register">Daftar</button>
             </div>
             <label>Sudah punya akun ? masuk <a class="text-decoration-none text-warning" href="/index.php">disini</a></label>
         </form>
