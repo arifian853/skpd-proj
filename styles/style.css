@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 :root {
-    --blue : #26408B;
-    --light-blue : #A6CFD5;
-    --black : #000000;
-    --white : #FFFFFF;
-    --green : #496F5D;
+    --blue: #26408B;
+    --light-blue: #A6CFD5;
+    --black: #000000;
+    --white: #FFFFFF;
+    --green: #496F5D;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,6 +35,10 @@ html, body {
     flex-direction: column;
     padding: 1em;
     gap: 1.1em;
+    border-radius: 7px;
+    -webkit-box-shadow: 10px 10px 22px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 22px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 22px -12px rgba(0, 0, 0, 0.75);
 }
 
 .main-form input {
@@ -41,6 +46,7 @@ html, body {
     border-radius: 7px;
     border: none;
     outline: none;
+    width: 95%;
 }
 
 .logo-title {
@@ -48,11 +54,20 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    text-align: center;
 }
 
 .form-logo {
-    width: 150px;
+    width: 100px;
     height: auto;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-btn {
