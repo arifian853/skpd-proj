@@ -28,7 +28,7 @@
                 <li></li>
             </ul>
             <div class="d-flex gap-4 align-items-center">
-              <a href=""> <button class="btn bg-success text-white p-1"> Edit profil </button> </a>
+              <a href="edit-info.php"> <button class="btn bg-success text-white p-1"> Edit profil </button> </a>
               <button class="btn p-1 bg-primary text-white"> Keluar </button>
             </div>
           </div>

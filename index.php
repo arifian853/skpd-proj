@@ -25,7 +25,7 @@
             <div class="btn-container">
                 <button class="login-btn" type="submit" value="login">Login</button>
             </div>
-            <label>Belum punya akun ? Daftar <a class="text-decoration-none text-warning" href="register.html">disini</a></label>
+            <label>Belum punya akun ? Daftar <a class="text-decoration-none text-warning" href="pages/register.php">disini</a></label>
         </form>
     </div>
 </body>
