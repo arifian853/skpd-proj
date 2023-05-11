@@ -44,7 +44,7 @@
                         <p class='text-center'> Pendaftaran berhasil, silakan login. </p>
                       </div>
                       <br />";
-                echo "<a href='index.php'> <button class='btn btn-primary'> Masuk (login) sekarang </button> </a>";
+                echo "<a href='login-pengajuan.php'> <button class='btn btn-primary'> Masuk (login) sekarang </button> </a>";
             }
             
 

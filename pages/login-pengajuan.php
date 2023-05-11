@@ -17,7 +17,7 @@
             <h3>SISTEM LAYANAN <br /> PENCAIRAN DANA</h3>
         </div>
         <form action="login.php" method="post" class="main-form">
-            <label class="text-center bg-success p-2 rounded-2">Login sebagai Verifikator Kasubid</label>
+            <label class="text-center bg-success p-2 rounded-2">Pengajuan</label>
             <label class="label-login" for="username">ID Pengguna (Username)</label>
             <input type="text" name="username" id="username" placeholder="ID Pengguna" required>
             <label class="label-login" for="password">Kata Sandi (Password)</label>
@@ -25,6 +25,7 @@
             <div class="btn-container">
                 <button class="login-btn" type="submit" value="login">Login</button>
             </div>
+            <label>Belum punya akun ? Daftar <a class="text-decoration-none text-warning" href="pages/register.php">disini</a></label>
         </form>
     </div>
 </body>
