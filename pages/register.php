@@ -22,11 +22,13 @@
         include("../php/config.php");
 
         if(isset($_POST['submit'])) {
+            $fullname = $_POST['fullname'];
             $username = $_POST['username'];
             $email = $_POST['email'];
             $password = $_POST['password'];
 
             $verify_query = mysqli_query($con, "SELECT Email FROM users_pengaju WHERE Email='$email'");
+            $verify_query_username = mysqli_query($con, "SELECT Username FROM users_pengaju WHERE Username='$username'");
 
             if(mysqli_num_rows($verify_query) !=0) {
                 echo " <br />
@@ -36,8 +38,19 @@
                       <br />";
                 echo "<a href='javascript:self.history.back()'> <button class='btn btn-primary'> Kembali </button> </a>";
             }
+
+            if(mysqli_num_rows($verify_query_username) !=0) {
+                echo " <br />
+                <div class='alert alert-danger'> 
+                        <p class='text-center'> Username ini sudah dipakai, silakan gunakan username lain </p>
+                      </div>
+                      <br />";
+                echo "<a href='javascript:self.history.back()'> <button class='btn btn-primary'> Kembali </button> </a>";
+            }
+
+
             else {
-                mysqli_query($con, "INSERT INTO users_pengaju(Username,Email,Password) VALUES('$username', '$email', '$password')") or die("Sepertinya ada kesalahan");
+                mysqli_query($con, "INSERT INTO users_pengaju(FullName, Username ,Email ,Password) VALUES('$fullname','$username', '$email', '$password')") or die("Sepertinya ada kesalahan");
     
                 echo " <br />
                 <div class='alert alert-success'> 
@@ -54,6 +67,8 @@
 
         <form method="post" class="main-form">
             <label class="text-center bg-success p-2 rounded-2">Daftar akun baru</label>
+            <label class="label-login" for="fullname">Nama lengkap</label>
+            <input type="text" name="fullname" id="fullname" placeholder="Nama lengkap" required>
             <label class="label-login" for="email">Alamat email</label>
             <input type="email" name="email" id="email" placeholder="Alamat email" required>
             <label class="label-login" for="username">ID Pengguna (Username)</label>
